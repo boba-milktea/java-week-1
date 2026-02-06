@@ -10,11 +10,15 @@
  *
  * 3. Create an int variable counter = 0.
  *    - Use pre-increment (++counter) and print the value.
+ *    - Print the value inbetween
  *    - Use post-increment (counter++) and print the value.
+ *    - Print the value after
  *
  * 4. Create an int variable count = 5.
  *    - Use pre-decrement (--count) and print the value.
+ *    - Print the value inbetween
  *    - Use post-decrement (count--) and print the value.
+ *    - Print the value after
  *
  * Bonus:
  * 5. Combine unary operators with arithmetic:
@@ -46,11 +50,27 @@ public class UnaryE
 
         // -------------------- Student Exercises --------------------
         // 1. Create int num = 8; apply unary minus and plus.
+        int num = 8;
+        int unaryM = -num;
+        int unaryP = +num;
+        System.out.println("Unary minus num: " + unaryM);
+        System.out.println("Unary plus num: " + unaryP);
 
         // 2. Create boolean isOpen = false; invert it with !.
+        boolean isOpen = false;
+        System.out.println(!(isOpen));
 
         // 3. Create int counter = 0; use pre-increment and post-increment.
+        int counter = 0;
+        System.out.println("Pre-increment: " + (++counter));
+
+        System.out.println("Post-increment: " + (counter++));
+        System.out.println("Post-increment: " + (counter));
 
         // 4. Create int count = 5; use pre-
+        int count = 5;
+        System.out.println("Pre-decrement: " + (--count));
+
+        System.out.println("Post-decrement: " + (count--));
     }
 }

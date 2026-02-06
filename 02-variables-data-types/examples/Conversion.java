@@ -30,13 +30,13 @@ public class Conversion
         int widenedInt = letter;         // char to int (ASCII/Unicode value)
 
         System.out.println("=== Implicit (Widening) Conversions ===");
-        System.out.println("int (" + intValue + ") → double: " + widenedDouble);
-        System.out.println("char ('" + letter + "') → int: " + widenedInt);
+        System.out.println("int (" + intValue + ") is converted to double: " + widenedDouble);
+        System.out.println("char ('" + letter + "') is converted to int: " + widenedInt);
 
         // --- Explicit Conversions (Narrowing) ---
         double doubleValue = 9.78;
         int narrowedInt = (int) doubleValue; // double to int (fraction lost)
-        float floatValue = 130.75f;
+        float floatValue = 128.001f;
         byte narrowedByte = (byte) floatValue; // float to byte (overflow possible)
 
         System.out.println("\n=== Explicit (Narrowing) Conversions ===");
@@ -44,3 +44,5 @@ public class Conversion
         System.out.println("float (" + floatValue + ") → byte: " + narrowedByte);
     }
 }
+
+

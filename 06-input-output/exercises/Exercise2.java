@@ -1,23 +1,24 @@
 /**
- * This is a placeholder class for input/output examples.
+ * Exercises: Input and Output in Java
  * -----------------------------------------------------
- * 1- Output:
+ * This program demonstrates safe input handling:
+ * 1. Output
  *   - System.out.print(): Prints text without a newline.
  *   - System.out.println(): Prints text with a newline.
  *   - System.out.printf(): Prints formatted text.
  *
- * 2- Input:
- *   - Scanner class: Used to read input from various sources (e.g., keyboard).
+ * 2. Input (using Scanner)
  *   - nextLine(): Reads a line of text.
  *   - nextInt(): Reads an integer.
  *   - nextDouble(): Reads a double.
  *   - next(): Reads a single word.
+ *
  * -----------------------------------------------------
  */
 
 import java.util.Scanner;
 
-public class InputOutput
+public class InputOutputE
 {
     public static void main(String[] args)
     {
@@ -28,32 +29,10 @@ public class InputOutput
         System.out.println("This is printed with a newline.");
         System.out.printf("Formatted number: %.2f%n", 123.456);
 
-
-        // 1. Reading an integer safely
-        int age;
-        while (true)
-        {
-            System.out.print("Enter your age: ");
-            if (scanner.hasNextInt())
-            {
-                age = scanner.nextInt();
-                System.out.println("age: " + age);
-                System.out.println("scanner.nextLine(): " + scanner.nextLine() ); // consume leftover newline
-                System.out.println("end");
-                break;
-            }
-            else
-            {
-                System.out.println("Invalid input. Please enter a valid integer.");
-                scanner.next(); // discard invalid token
-            }
-        }
-
-
-        // 1. Reading a full line
+        // 1. Reading a full line safely
         String line;
         System.out.print("Enter a line of text: ");
-        while ( ! scanner.hasNextLine())
+        while (!scanner.hasNextLine())
         {
             System.out.println("Invalid input. Please enter a line of text:");
             scanner.next(); // discard invalid token
@@ -61,12 +40,9 @@ public class InputOutput
         line = scanner.nextLine();
         System.out.println("You entered: " + line);
 
-        // 2. Reading an integer
-        int number = 10;
-
-        boolean val = 10 > 5;
-
-        while (val)     //this can also be while(true)
+        // 2. Reading an integer safely
+        int number;
+        while (true)
         {
             System.out.print("Enter an integer: ");
             if (scanner.hasNextInt())
@@ -83,7 +59,7 @@ public class InputOutput
         }
         System.out.println("You entered: " + number);
 
-        // 3. Reading a double
+        // 3. Reading a double safely
         double decimal;
         while (true)
         {
@@ -102,7 +78,7 @@ public class InputOutput
         }
         System.out.println("You entered: " + decimal);
 
-        // 4. Reading a single word
+        // 4. Reading a single word safely
         String word;
         while (true)
         {
@@ -110,8 +86,10 @@ public class InputOutput
             if (scanner.hasNext())
             {
                 word = scanner.next();
+                scanner.nextLine(); // consume leftover newline
                 break;
-            } else
+            }
+            else
             {
                 System.out.println("Invalid input. Please enter a word.");
                 scanner.next(); // discard invalid token

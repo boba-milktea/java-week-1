@@ -69,13 +69,79 @@ public class Switch
 
         // -------------------- Student Exercises --------------------
         // 1. Create int month (1-12) and print month name using switch.
+        int month = 2;
+        String monthName;
+
+        switch (month) {
+            case 1 -> monthName = "januari";
+            case 2 -> monthName = "februari";
+            case 3 -> monthName = "maart";
+            case 4 -> monthName = "april";
+            case 5 -> monthName = "mei";
+            case 6 -> monthName = "juni";
+            case 7 -> monthName = "juli";
+            case 8 -> monthName = "augustus";
+            case 9 -> monthName = "september";
+            case 10 -> monthName = "oktober";
+            case 11 -> monthName = "november";
+            case 12 -> monthName = "december";
+            default -> monthName = "invalid month";
+        }
+        System.out.println("The month is: " + monthName);
 
         // 2. Create char grade and print description using switch.
+        char grade = 'C';
+        String gradeResult;
+
+        switch (grade) {
+            case 'A' -> gradeResult = "Excellent";
+            case 'B' -> gradeResult =  "Good";
+            case 'C' -> gradeResult =  "Average";
+            case 'D' -> gradeResult =  "Below Average";
+            case 'F' -> gradeResult = "Fail";
+            default -> gradeResult = "Invalid Grade";
+        }
+
+        System.out.println("The grade result is: " + gradeResult);
+
 
         // 3. Create int trafficLight (1-3) and print light color using switch.
+        int trafficLight = 2;
+        String lightColor;
+
+        switch (trafficLight) {
+            case 1 -> lightColor = "Red";
+            case 2 -> lightColor = "Yellow";
+            case 3 -> lightColor = "Green";
+            default ->  lightColor = "Invalid";
+        }
+
+        System.out.println("The traffic light color is: " + lightColor);
 
         // 4. Create int menuOption (1-5) and print which option is selected.
+        int menuOption = 6;
+        String selected;
+
+        switch (menuOption) {
+            case 1 -> selected = "1";
+            case 2 -> selected = "2";
+            case 3 -> selected = "3";
+            case 4 -> selected = "4";
+            case 5 -> selected = "5 ";
+            default ->  selected =  "Nothing";
+        }
+
+        System.out.println(selected + "is selected");
 
         // 5. Combine cases for weekends (6 and 7) vs weekdays (1-5).
+
+        switch (day) {
+            case 1, 2, 3, 4, 5 -> dayName = "weekday";
+            case 7, 8 -> dayName = "weekend";
+            default -> dayName= "invalid day";
+
+    }
+        System.out.println( dayName == "weekday" ? "It's a weekday!" : "It's during the weekend" );
+
     }
 }

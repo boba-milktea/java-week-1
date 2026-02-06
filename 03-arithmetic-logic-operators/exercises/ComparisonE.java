@@ -58,15 +58,39 @@ public class ComparisonE
 
         // -------------------- Student Exercises --------------------
         // 1. Create int a = 50, b = 25 and compare them.
+        int a = 50;
+        int b = 25;
+        System.out.println("Is 'a' greater than 'b' : " + (a > b));
 
         // 2. Create double p = 5.5, q = 7.2 and compare them.
+        double p = 5.5;
+        double q = 7.2;
+        System.out.println("Is 'q' greater or equal than 'b' : " + (a >= b));
 
         // 3. Create char c1 = 'A', c2 = 'B' and check if c1 < c2.
+        char c1 = 'A';
+        char c2 = 'B';
+        System.out.println("Is 'c1' greater or equal than 'b' : " + (c1 < c2));
+
 
         // 4. Check if (x < y) AND (x != y).
+        System.out.println((x < y) && (x != y));
 
         // 5. Compare two Strings using .equals() instead of ==.
+        String s = "Yes";
+        String t = "No";
+        System.out.println(s.equals(t));
 
         // 6. Create three int variables and determine the largest.
+        int int1 = 939;
+        int int2 = 972;
+        int int3 = 6093;
+        if ((int1 >= int2) && (int1 >= int3)) {
+            System.out.println("int1 is the biggest");
+        } else if ((int2 >= int1) && (int2 >= int3)) {
+            System.out.println("int2 is the biggest");
+        } else {
+            System.out.println("int3 is the biggest");
+        }
     }
 }
