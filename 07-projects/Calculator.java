@@ -32,11 +32,21 @@ public class Calculator {
         System.out.println("You chose an operator: " + operator);
 
         String result = switch (operator) {
-            case '+' -> String.valueOf(firstNumber + secondNumber);
-            case '-' -> String.valueOf(firstNumber + secondNumber);
-            case '/' -> String.valueOf(firstNumber + secondNumber);
-            case '*' -> String.valueOf(firstNumber * secondNumber);
-            default -> "Something wrong";
+            case '+' -> {
+                yield String.valueOf(firstNumber + secondNumber);
+            }
+            case '-' -> {
+                yield String.valueOf(firstNumber + secondNumber);
+            }
+            case '/' -> {
+                yield String.valueOf(firstNumber + secondNumber);
+            }
+            case '*' -> {
+                yield String.valueOf(firstNumber * secondNumber);
+            }
+            default -> {
+                yield "Something wrong";
+            }
         };
 
         System.out.println("The result is: " + result);
