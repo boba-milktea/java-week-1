@@ -37,10 +37,6 @@ public class Palindrome {
         System.out.println(isPalindrome? "Yes, it's a palindrom.": "No, it's not a palindrom.");
 
 
-
-
-
-
         scanner.close();
     }
 }
