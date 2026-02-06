@@ -49,23 +49,39 @@ public class DataTypesE
 
         // -------------------- Student Exercises --------------------
         // 1. Create an int variable called age and assign it your age
-
+        int age = 30;
         // 2. Create a double variable called temperature and assign it any decimal
-
+        double temperature = 8.2;
         // 3. Create a char variable called gradeLetter and assign it a letter
-
+        char gradeLetter = 'Z';
         // 4. Create a boolean variable called isJavaFun and assign true or false
-
+        boolean isJavaFun = false;
         // 5. Create a String variable called favoriteColor and assign it a color
-
+        String favoriteColor = "blue";
         // 6. Create an int array called numbers with at least 5 values, then print them
-
+        int[] numbers = {3, 8, 9, 2, 5};
+        for (int number : numbers ) {
+            System.out.println(number);
+        }
         // 7. Change one value inside numbers and print the updated array
+        numbers[2] = 0;
+        for (int number : numbers) {
+            System.out.println(number);
+        }
 
         // 8. Create a String array with 3 favorite foods and print them in a loop
+        String[] foods = {"chocolate", "milk", "crap"};
+        for (String food : foods) {
+            System.out.println(food);
+        }
 
         // 9. Create two double variables, add them together, and print the result
+        double newDouble1 = 77.98930;
+        double newDouble2 = 88.930493;
+        System.out.println(newDouble1 + newDouble2);
 
         // 10. Use String concatenation to print: "My name is ___ and I am ___ years old."
+        String name = "Java";
+        System.out.println("My name is " + name + " and I am " + age + " years old.");
     }
 }

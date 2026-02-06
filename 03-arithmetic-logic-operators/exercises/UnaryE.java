@@ -50,11 +50,27 @@ public class UnaryE
 
         // -------------------- Student Exercises --------------------
         // 1. Create int num = 8; apply unary minus and plus.
+        int num = 8;
+        int unaryM = -num;
+        int unaryP = +num;
+        System.out.println("Unary minus num: " + unaryM);
+        System.out.println("Unary plus num: " + unaryP);
 
         // 2. Create boolean isOpen = false; invert it with !.
+        boolean isOpen = false;
+        System.out.println(!(isOpen));
 
         // 3. Create int counter = 0; use pre-increment and post-increment.
+        int counter = 0;
+        System.out.println("Pre-increment: " + (++counter));
+
+        System.out.println("Post-increment: " + (counter++));
+        System.out.println("Post-increment: " + (counter));
 
         // 4. Create int count = 5; use pre-
+        int count = 5;
+        System.out.println("Pre-decrement: " + (--count));
+
+        System.out.println("Post-decrement: " + (count--));
     }
 }
